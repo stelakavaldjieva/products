@@ -1,0 +1,16 @@
+# using yml file instead of properties is a little bit more structured
+spring:
+  datasource:
+    # connection to remote Oracle database
+    url: "jdbc:oracle:thin:stela_kavaldzhieva/dbpass@83.228.124.173:6223/stela_kavaldzhieva"
+    driverClassName: "oracle.jdbc.OracleDriver"
+    username: "stela_kavaldzhieva"
+    password: "dbpass"
+  second-datasource:
+    # connection to local h2 database
+    url: "jdbc:h2:file:./products-db;;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE"
+    driverClassName: "org.h2.Driver"
+    username: "sa"
+    password: ""
+  h2:
+    console.enabled: true

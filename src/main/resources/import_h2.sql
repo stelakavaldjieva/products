@@ -1,0 +1,77 @@
+-- Create H2 database tables and populate with example data
+-- Create table for cars
+CREATE TABLE CAR
+(
+    ID          IDENTITY,
+    BRAND_NAME  VARCHAR(40),
+    COLOR       VARCHAR(40),
+    PRICE       DECIMAL,
+    WEIGHT      BIGINT,
+    LENGTH      BIGINT,
+    QUANTITY    BIGINT
+);
+
+-- Insert some cars
+INSERT INTO CAR (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES ('Mercedes', 'blue', 450, 10000, 2000, 10);
+
+INSERT INTO CAR (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('BMW', 'blue', 450, 10000, 2000, 20);
+
+INSERT INTO CAR (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('Ferrari', 'yellow', 550, 100000, 3500, 30);
+
+-- Create table for phones
+CREATE TABLE PHONE
+(
+    ID          IDENTITY,
+    BRAND_NAME  VARCHAR(40),
+    COLOR       VARCHAR(40),
+    PRICE       DECIMAL,
+    WEIGHT      BIGINT,
+    LENGTH      BIGINT,
+    QUANTITY    BIGINT
+);
+
+-- Insert some phones
+INSERT INTO PHONE (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('Nokia', 'blue', 5, 100, 1, 1000);
+
+INSERT INTO PHONE (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('Samsung', 'white', 8, 400, 1, 2000);
+
+INSERT INTO PHONE (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('iHunt', 'red', 6, 50, 1, 3000);
+
+-- Create table for TV-s
+create table TV
+(
+    ID          IDENTITY,
+    BRAND_NAME  VARCHAR(40),
+    COLOR       VARCHAR(40),
+    PRICE       DECIMAL,
+    WEIGHT      BIGINT,
+    LENGTH      BIGINT,
+    QUANTITY    BIGINT
+);
+
+-- Insert some TV-s
+INSERT INTO TV (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('ViewStar', 'blue', 105, 150, 2, 100);
+
+INSERT INTO TV (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('LG', 'black', 85, 1200, 2, 200);
+
+INSERT INTO TV (BRAND_NAME, COLOR, LENGTH, PRICE, WEIGHT, QUANTITY)
+VALUES  ('Samsung', 'red', 105, 180, 2, 300);
+
+-- Create table for sales
+create table SALE
+(
+    SALE_ID         IDENTITY,
+    PRODUCT_ID      BIGINT,
+    NB_SOLD         BIGINT,
+    SALE_DATE       DATETIME,
+    PRODUCT_TYPE    INT,
+    PRICE           DECIMAL
+);
